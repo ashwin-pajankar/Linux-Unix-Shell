@@ -1,0 +1,6 @@
+https://www.putty.org/
+https://www.bitvise.com/ssh-client-download
+https://mobaxterm.mobatek.net/
+
+https://nmap.org/zenmap/
+nmap -sn 192.168.0.*
