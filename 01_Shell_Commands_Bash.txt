@@ -1,0 +1,258 @@
+clear
+
+echo $SHELL
+
+cat /etc/shells
+
+sudo apt update -y
+sudo apt full-upgrade -y
+
+sudo rpi-update
+
+cd /
+cd ~
+cd ..
+
+pwd
+
+sudo apt install tree -y
+
+tree
+
+ls
+ls -l
+ls -la
+ls | more
+ls -l | wc -l
+
+touch test.txt
+
+ls -l touch.txt
+
+sudo apt install vim -y
+sudo apt install leafpad -y
+sudo apt install gedit -y
+sudo apt install mousepad -y
+sudo apt install kwrite -y
+sudo apt install kate -y
+sudo apt install jedit -y
+
+mkdir testdir
+rm -d testdir
+
+mkdir testdir
+rmdir testdir
+
+touch test.txt
+rm test.txt
+
+mkdir testdir
+cd testdir
+pwd
+touch test.txt
+cd ..
+rm testdir
+rm -r testdir
+
+touch test.txt
+touch Test.txt
+touch TEST.txt
+ls -lF
+
+sudo raspi-config
+
+apt install sudo
+
+man ls
+
+sudo apt install info
+info ls
+
+ifconfig
+
+sudo apt install wireless-tools -y
+iwconfig
+
+sudo apt install wget -y
+wget ftp://ftp.gnu.org/pub/gnu/wget/wget-latest.tar.gz
+ls *.gz
+
+touch abc
+mkdir practice
+
+cp abc abc1
+cp abc ./practice/
+mv abc1 abc2
+
+George,10000,34
+Harry,30000,56
+Ashwin,90000,98
+Scott,54000,67
+Tiger,09343,24
+
+
+cat abc
+head abc
+head -5 abc
+tail abc
+tail -5 abc
+
+cut -c 1-2 abc
+cut -f 1-2 -d"," abc
+cut -b 1-2 abc
+
+echo test
+echo 'test'
+echo "test"
+
+ls
+echo $?
+
+echo test1; echo test2
+kwrite &
+
+echo abc && echo xyz
+fecho abc && echo xyz
+
+echo abc || echo xyz
+fecho abc || echo xyz
+
+rm file1 && echo SUCCESS || echo FAIL
+
+echo We want to print \;
+
+ls a?c
+ls a*
+ls *.txt
+
+history
+
+history | tail -10
+
+a=2
+str1='ASHWIN'
+echo $a
+echo $str1
+
+env
+
+echo $BASH_VERSION
+echo $HOSTNAME
+echo $HISTFILE
+echo $HOME
+echo $PATH
+echo $COLUMNS
+echo $LINES
+echo $LOGNAME
+echo $OSTYPE
+echo $PS1
+echo $USERNAME
+echo $PWD
+
+uptime
+
+who
+whoami
+who | wc -l
+
+uname
+uname -a
+
+ps -ef
+ps -ag
+
+df -h
+
+sudo apt install usbutils -y
+lsusb
+
+sudo apt install util-linux -y
+lscpu
+
+cat /proc/cpuinfo
+
+sudo apt install inxi -y
+inxi -C
+
+sudo apt install lshw -y
+sudo lshw -C CPU
+
+sudo apt install hardinfo -y
+hardinfo &
+
+sudo apt install hwinfo -y
+hwinfo
+
+nproc
+
+free -m
+cat /proc/meminfo
+
+which python3
+whereis python3
+
+sudo apt install cmake -y
+cd /tmp
+git clone https://github.com/raspberrypi/userland
+cd userland
+./buildme
+
+
+vcgencmd measure_temp 
+
+vcgencmd get_mem arm && vcgencmd get_mem gpu
+
+cat abc.csv
+
+ASHWIN, 20K, INDIA
+THOR, 10K, Asgard
+JANE, 15K, UK
+IRON MAN, 100K, USA
+
+wc abc.csv
+
+wc -w abc.csv
+wc -c abc.csv
+wc -l abc.csv
+
+cut -c 2-5 abc.csv
+cut -d "," -f 2 abc.csv
+
+grep ASHWIN abc.csv
+grep -i asgard abc.csv
+
+sort abc.csv
+sort abc.csv | uniq
+
+date
+sudo apt install -y bsdmainutils
+cal
+
+find . -name "*.conf"
+find / -name "*.conf"
+
+top
+sudo apt install htop
+htop
+
+cat abc.csv
+cat < abc.csv
+cat 0< abc.csv
+
+ls -l 1>output.log
+cat output.log
+ls -l > output.log
+
+ls -l 1>> output.log
+ls -l >> output.log
+
+ls -l 2>error.txt
+ls -l 2>>error.txt
+
+ls -l 1>output.txt 2>&1
+ls -l >output.txt 2>&1
+ls -l 2>/dev/null
+ls -l >output.txt 2>/dev/null
+
+kill 0 (kill everything except the bash shell)
+
