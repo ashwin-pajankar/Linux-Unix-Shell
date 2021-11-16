@@ -1,0 +1,219 @@
+clear
+
+echo $SHELL
+
+cat /etc/shells
+
+sudo port install ksh
+sudo port install tcsh
+sudo port install fish
+
+cd /
+cd ~
+cd ..
+
+pwd
+
+brew install tree
+
+tree
+
+ls
+ls -l
+ls -la
+ls | more
+ls -l | wc -l
+
+touch test.txt
+
+ls -l touch.txt
+
+vi
+vim
+nano
+
+
+mkdir testdir
+rm -d testdir
+
+mkdir testdir
+rmdir testdir
+
+touch test.txt
+rm test.txt
+
+mkdir testdir
+cd testdir
+pwd
+touch test.txt
+cd ..
+rm testdir
+rm -r testdir
+
+touch test.txt
+touch Test.txt
+touch TEST.txt
+ls -lF
+
+
+man ls
+
+info ls
+
+ifconfig
+
+
+sudo port install wget
+wget ftp://ftp.gnu.org/pub/gnu/wget/wget-latest.tar.gz
+ls *.gz
+rm *.gz
+
+touch abc
+mkdir practice
+
+cp abc abc1
+cp abc ./practice/
+mv abc1 abc2
+
+George,10000,34
+Harry,30000,56
+Ashwin,90000,98
+Scott,54000,67
+Tiger,09343,24
+
+
+cat abc
+head abc
+head -5 abc
+tail abc
+tail -5 abc
+
+cut -c 1-2 abc
+cut -f 1-2 -d"," abc
+cut -b 1-2 abc
+
+echo test
+echo 'test'
+echo "test"
+
+ls
+echo $?
+
+echo test1; echo test2
+idle3 &
+
+echo abc && echo xyz
+fecho abc && echo xyz
+
+echo abc || echo xyz
+fecho abc || echo xyz
+
+rm file1 && echo SUCCESS || echo FAIL
+
+echo We want to print \;
+
+ls a?c
+ls a*
+ls *.txt
+
+history
+
+history | tail -10
+
+a=2
+str1='ASHWIN'
+echo $a
+echo $str1
+
+env
+
+echo $BASH_VERSION
+echo $HOSTNAME
+echo $HISTFILE
+echo $HOME
+echo $PATH
+echo $COLUMNS
+echo $LINES
+echo $LOGNAME
+echo $OSTYPE
+echo $PS1
+echo $USERNAME
+echo $PWD
+
+uptime
+
+who
+whoami
+who | wc -l
+
+uname
+uname -a
+
+ps -ef
+ps -ag
+
+df -h
+
+sudo port install usbutils
+lsusb
+
+sysctl -a | grep machdep.cpu
+sysctl -n machdep.cpu.brand_string
+
+sysctl -a | awk '/hw./'
+
+which python3
+
+
+cat abc.csv
+
+ASHWIN, 20K, INDIA
+THOR, 10K, Asgard
+JANE, 15K, UK
+IRON MAN, 100K, USA
+
+wc abc.csv
+
+wc -w abc.csv
+wc -c abc.csv
+wc -l abc.csv
+
+cut -c 2-5 abc.csv
+cut -d "," -f 2 abc.csv
+
+grep ASHWIN abc.csv
+grep -i asgard abc.csv
+
+sort abc.csv
+sort abc.csv | uniq
+
+date
+cal
+
+find . -name "*.conf"
+find / -name "*.conf"
+
+top
+sudo port install htop
+htop
+
+cat abc.csv
+cat < abc.csv
+cat 0< abc.csv
+
+ls -l 1>output.log
+cat output.log
+ls -l > output.log
+
+ls -l 1>> output.log
+ls -l >> output.log
+
+ls -l 2>error.txt
+ls -l 2>>error.txt
+
+ls -l 1>output.txt 2>&1
+ls -l >output.txt 2>&1
+ls -l 2>/dev/null
+ls -l >output.txt 2>/dev/null
+
+kill 0 (kill everything except the bash shell)

@@ -1,0 +1,224 @@
+clear
+
+echo $SHELL
+
+cat /etc/shells
+
+pkg install -y bash
+pkg install -y fish
+pkg install -y zsh
+
+freebsd-version
+
+cd /
+cd ~
+cd ..
+
+pwd
+
+pkg install -y tree
+
+tree
+
+ls
+ls -l
+ls -la
+ls | more
+ls -l | wc -l
+
+touch test.txt
+
+ls -l touch.txt
+
+vi
+
+pkg install -y vim
+vim
+
+pkg install -y nano
+nano
+
+
+mkdir testdir
+rm -d testdir
+
+mkdir testdir
+rmdir testdir
+
+touch test.txt
+rm test.txt
+
+mkdir testdir
+cd testdir
+pwd
+touch test.txt
+cd ..
+rm testdir
+rm -r testdir
+
+touch test.txt
+touch Test.txt
+touch TEST.txt
+ls -lF
+
+
+man ls
+
+
+
+ifconfig
+
+
+pkg install -y wget
+wget ftp://ftp.gnu.org/pub/gnu/wget/wget-latest.tar.gz
+ls *.gz
+rm *.gz
+
+touch abc
+mkdir practice
+
+cp abc abc1
+cp abc ./practice/
+mv abc1 abc2
+
+nano abc
+
+George,10000,34
+Harry,30000,56
+Ashwin,90000,98
+Scott,54000,67
+Tiger,09343,24
+Sally,34567,45
+
+
+cat abc
+head abc
+head -5 abc
+tail abc
+tail -5 abc
+
+cut -c 1-2 abc
+cut -f 1-2 -d"," abc
+cut -b 1-2 abc
+
+echo test
+echo 'test'
+echo "test"
+
+ls
+echo $?
+
+echo test1; echo test2
+
+pkg install -y gedit
+gedit &
+
+echo abc && echo xyz
+fecho abc && echo xyz
+
+echo abc || echo xyz
+fecho abc || echo xyz
+
+rm file1 && echo SUCCESS || echo FAIL
+
+echo We want to print \;
+
+ls a?c
+ls a*
+ls *.txt
+
+history
+
+history | tail -10
+
+a=2
+str1='ASHWIN'
+echo $a
+echo $str1
+
+env
+
+echo $HOME
+echo $PATH
+echo $LOGNAME
+echo $OSTYPE
+echo $PWD
+
+uptime
+
+who
+whoami
+who | wc -l
+
+uname
+uname -a
+
+ps -ef
+ps -ag
+
+df -h
+
+pkg install -y usbutils
+lsusb
+
+sysctl -a | awk '/hw./'
+
+pkg install -y dmidecode
+dmidecode
+
+which bash
+
+cat abc.csv
+
+ASHWIN, 20K, INDIA
+THOR, 10K, Asgard
+JANE, 15K, UK
+IRON MAN, 100K, USA
+
+wc abc.csv
+
+wc -w abc.csv
+wc -c abc.csv
+wc -l abc.csv
+
+cut -c 2-5 abc.csv
+cut -d "," -f 2 abc.csv
+
+grep ASHWIN abc.csv
+grep -i asgard abc.csv
+
+sort abc.csv
+sort abc.csv | uniq
+
+date
+cal
+
+find . -name "*.conf"
+find / -name "*.conf"
+
+top
+pkg install -y htop
+htop
+
+cat abc.csv
+cat < abc.csv
+
+cat output.log
+ls -l > output.log
+ls -l >> output.log
+ls -l >/dev/null
+
+kill 0 (kill everything except the bash shell)
+kill -9 16902
+
+00:00:00 Introduction
+00:01:00 nmap with Zenmap and remote login
+00:06:30 Basic commands
+00:16:08 file and directory related commands
+00:24:40 Text editors (text based)
+00:30:42 more file and directory related commands
+00:41:40 Important UNIX/Linux utilities
+01:01:35 Filename globbing
+01:06:30 Environment Variables
+01:07:58 More of the useful Linux/UNIX commands and utilities
+01:20:40 Stdin, Stdout, and /dev/null
