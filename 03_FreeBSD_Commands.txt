@@ -210,15 +210,3 @@ ls -l >/dev/null
 
 kill 0 (kill everything except the bash shell)
 kill -9 16902
-
-00:00:00 Introduction
-00:01:00 nmap with Zenmap and remote login
-00:06:30 Basic commands
-00:16:08 file and directory related commands
-00:24:40 Text editors (text based)
-00:30:42 more file and directory related commands
-00:41:40 Important UNIX/Linux utilities
-01:01:35 Filename globbing
-01:06:30 Environment Variables
-01:07:58 More of the useful Linux/UNIX commands and utilities
-01:20:40 Stdin, Stdout, and /dev/null

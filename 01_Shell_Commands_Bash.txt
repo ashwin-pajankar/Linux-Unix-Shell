@@ -1,3 +1,5 @@
+nmap -sn 192.168.0.*
+
 clear
 
 echo $SHELL
@@ -5,9 +7,12 @@ echo $SHELL
 cat /etc/shells
 
 sudo apt update -y
+sudo apt list --upgradable
 sudo apt full-upgrade -y
 
-sudo rpi-update
+sudo rpi-update -y
+
+sudo init 6
 
 cd /
 cd ~
@@ -29,6 +34,7 @@ touch test.txt
 
 ls -l touch.txt
 
+sudo apt install -y nano
 sudo apt install vim -y
 sudo apt install leafpad -y
 sudo apt install gedit -y
@@ -65,7 +71,7 @@ apt install sudo
 
 man ls
 
-sudo apt install info
+sudo apt install info -y
 info ls
 
 ifconfig
@@ -191,13 +197,6 @@ cat /proc/meminfo
 which python3
 whereis python3
 
-sudo apt install cmake -y
-cd /tmp
-git clone https://github.com/raspberrypi/userland
-cd userland
-./buildme
-
-
 vcgencmd measure_temp 
 
 vcgencmd get_mem arm && vcgencmd get_mem gpu
@@ -255,4 +254,3 @@ ls -l 2>/dev/null
 ls -l >output.txt 2>/dev/null
 
 kill 0 (kill everything except the bash shell)
-
